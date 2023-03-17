@@ -9,7 +9,10 @@ This plugin was written in 2016 with a collaborator to help users find locations
 
 ## WordPress Template Demo
 
-I customized the Genesis Corporate Pro theme using a custom PHP template and Advanced Custom Fields for IDExperts. The template accommodates 4 design types, depending on the type of breach and service purchased by IDExpert's client.
+This folder contains two projects.
+
+1. A WooCommerce theme I customized for ExpressPCB, which showcases file parsing and PHP session management.
+2. A responsive WordPress theme I customized for IDExperts using the Genesis Framework.
 
 ## Web Application
 
