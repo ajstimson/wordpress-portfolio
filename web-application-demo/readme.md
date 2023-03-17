@@ -25,3 +25,4 @@ The application offers the following features:
 -   Update the JavaScript code to use ES6 syntax
 -   Replace the `struts.js` file functionality with server-side code using PHP and Gravity Forms' updated API.
 -   Move much of the relevant PHP code into a custom WordPress plugin.
+-   Responsive design
