@@ -5,7 +5,7 @@ This repository contains examples of code I have written in the past. To view vi
 
 ## Plugin Demo
 
-This plugin was written in 2016 with a collaborator to help users find locations to recycle excess paint using the Google Maps JavaScript API. We used the Redux framework to build the WP-Admin UI, and the plugin is still in use at [PaintCare Locator](https://www.paintcare.org/drop-off-sites/).
+This plugin was written in 2016 with a collaborator to help users find locations to recycle excess paint using the Google Maps JavaScript API. View the plugin in action here: [PaintCare: Find a Drop-Off Site](https://www.paintcare.org/drop-off-sites/).
 
 ## WordPress Template Demo
 
