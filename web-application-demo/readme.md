@@ -1,6 +1,12 @@
 # Woodfold Elevator Gate Configurator tool
 
-This is a product configurator tool I built for Woodfold in 2019. Initially, the client required support for legacy browsers (IE9), so the JavaScript files could not use ES5 syntax - which is why the code is written in ES3.
+This is a product configurator tool I built for Woodfold in 2019. I shepherded this project from discovery sessions with several stakeholders, through drafting functional specifications, wireframes, design mock-ups and implementation.
+
+The project constraints were as follows:
+
+-   The client required support for legacy browsers (IE9), so the JavaScript files could not use ES5 syntax - which is why the code is written in ES3.
+-   They required the application to be built using their existing WordPress site.
+-   They wanted the tool to be independent of most plugins, to avoid future conflicts with other plugins.
 
 The application is built using
 
