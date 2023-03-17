@@ -1,0 +1,794 @@
+/*==================================================
+=                       GLOBAL                     =
+==================================================*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+a:active,
+a:focus {
+    outline : none;
+}
+
+
+ body.page-template-primary-page {
+     max-width: 1920px;
+ }
+
+ .page-template-primary-page .content-sidebar-wrap, 
+ .page-template-primary-page .wrap {
+     max-width: inherit;
+ }
+
+ .page-template-primary-page .button {
+     background: #00c496;
+     border-radius: 1rem;
+     text-transform: uppercase;
+ }
+
+
+ .page-template-primary-page .site-header .button {
+     font-size: 1.4rem;
+ }
+
+ .front-page.page .content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-template-primary-page .hidden {
+    display: none;
+}
+
+.page-template-primary-page .wrap {
+    width: 75.75%;
+}
+
+
+/*==================================================
+=                    MAIN NAV                      =
+==================================================*/
+
+#menu-header-menu .menu-item {
+    height: 7rem;
+}
+
+#menu-header-menu .custom-logo {
+    width: 100%;
+}
+
+.menu-item.active a {
+    padding-bottom: 4px;
+}
+
+.menu-item.active > a {
+    border-bottom: 4px solid #00c496;
+    margin-bottom: -4px;
+}
+
+#menu-header-menu .menu-item-has-children{
+    position: relative;
+}
+
+#menu-header-menu .sub-menu-toggle {
+    display: block;
+    right: 3px;
+    top: 12px;
+}
+
+#menu-header-menu .sub-menu-toggle:before {
+    top: 15px;
+    left: 3px;
+    border-top: 8px solid #555;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+#menu-header-menu .sub-menu-toggle:after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    border-top: 7px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+
+  #menu-header-menu .menu-item-has-children .sub-menu{
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .66s, visibility .66s;
+  }
+
+  #menu-header-menu .menu-item-has-children:hover .sub-menu{
+      visibility: visible;
+      opacity: 1;
+  }
+
+/*==================================================
+=                    MARQUEE                       =
+==================================================*/
+
+.flex-parent, .marquee-buttons {
+    display: flex;
+}
+
+.flex-row, .marquee-buttons {
+    flex-direction: row;
+}
+
+#marquee {
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    margin-top: 100px;
+    overflow: hidden;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    position: relative;
+}
+
+#marquee.productV1,
+#marquee.productV2 {
+    background-size: auto 100%;
+}
+
+#marquee.geometric{
+    background-size: auto 101%;
+}
+
+#marquee.lifestyle .background {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    right: 0;
+    background-size: auto 100%;
+    z-index: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%), url('/wp-content/uploads/2020/07/lifestyle-hero-full.jpg');
+    background-position-x: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#marquee .wrap {
+    position: relative;
+}
+
+#marquee section {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+#marquee .flex-child {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    align-self: center;
+    position: relative;
+}
+
+#marquee .logo-wrap {
+    margin: 3rem 0;
+    height: 120px;
+    width: auto;
+    overflow: hidden;
+}
+
+#marquee .marquee-logo {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    object-position: left;
+}
+
+#marquee .no-logo {
+    height: 60px;
+}
+
+.marquee-buttons .button{
+    border: 2px solid #00c496;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.marquee-buttons .button + .button, .marquee-buttons .button:first-child:hover{
+    background-color: #fff;
+    color: #00c496;
+
+}
+
+.marquee-buttons .button + .button {
+    margin-left: 5%;
+}
+
+.marquee-buttons .button + .button:hover{
+    background: #00c496;
+    color: #fff;
+}
+
+#marquee.productV1 .marquee-item + .marquee-item img{
+    margin-left: 10%;
+}
+
+/*==================================================
+=                   ENROLLMENT                     =
+==================================================*/
+
+#enrollment {
+    background-color: #fff;
+}
+
+#enrollment .flex-child {
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* align-self: center; */
+}
+
+.enrollment-cta {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-right: 10%;
+}
+
+.enrollment-cta .button {
+    width: 50%;
+    text-align: center;
+}
+
+#enrollment .enrollment-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #enrollment .card-item {
+    display: flex; 
+    padding: 0.5em;
+    width: 100%;
+  }
+
+  @media all and (min-width: 40em) {
+    #enrollment .card-item  {
+      width: 100%;
+    }
+  }
+  @media all and (min-width: 60em) {
+    #enrollment .card-item  {
+      width: 50%;
+    }
+  }
+  .card-content {
+      background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+      width: 100%;
+  }
+  .card-content p {
+      flex: 1 0 auto;
+  }
+  
+  .card-item .icon {
+    max-width: 50px;
+    height: 75px;
+    object-fit: contain;
+}
+
+#enrollment .card-item{
+     flex-grow: 0;
+}
+
+/* #enrollment .card-item:last-child .card-content {
+    max-width: 50%;
+} */
+
+.enrollment-cards p {
+    margin: 0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.4rem;
+}
+
+/*==================================================
+=                       FAQ                        =
+==================================================*/
+
+#faq {
+    background: #f3f3f3;
+}
+
+#faq h2, #additional-resources h2 {
+    margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
+}
+
+#faq .flex-parent{
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#faq .flex-child + .flex-child.flex-column-full,
+#faq .flex-child.flex-column-full + .flex-column-half,
+#faq .flex-child.flex-column-full + .flex-column-half + .flex-column-half {
+    padding-top: 2%;
+}
+
+#faq .flex-column-half {
+    flex-basis: 50%;
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    /* IE10+ specific styles go here */
+    #faq .flex-column-half {
+        flex-basis: 49%;
+    }
+ }
+
+#faq .flex-column-half:first-child {
+    padding-right: 1%;
+}
+
+#faq .flex-column-half + .flex-column-half {
+    padding-left: 1%;
+}
+
+
+#faq hr,
+#additional-resources hr,
+#press-release hr {
+    background: linear-gradient(to right, #00C396, #c6fc98);
+    height: 2px;
+    margin: 0;
+    padding: 0;
+
+}
+
+#press-release hr {
+    margin-bottom: 2%;
+}
+
+#faq .flex-column-full {
+    flex-basis: 100%;
+    /* margin-top: 5%; */
+}
+
+#faq .section-title,
+#additional-resources .section-title {
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#faq .section-title {
+    margin: 0;
+}
+
+#additional-resources .section-title {
+    margin: 2% 0;
+}
+
+.section-seperator {
+    margin: 2% 0;
+}
+
+.faq-item {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 2rem 5rem;
+    width: 100%;
+}
+
+.faq-item + .faq-item {
+    border-top: none;
+}
+
+#faq .faq-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+#faq .faq-item a:focus { 
+   outline: 0; 
+}
+
+
+#faq .faq-item a,
+#faq .faq-item p {
+    font-size: 1.6rem;
+}
+
+#faq .accordion-toggle {
+    display: block;
+}
+
+#faq a.accordion-toggle {
+    position: relative;
+    max-width: 95%;
+}
+
+#faq a.accordion-toggle:after {
+    content: '+';
+    position: absolute;
+    right: -5%;
+    top: 0;
+}
+
+#faq .expanded a.accordion-toggle:after {
+    content: '-';
+}
+
+#faq .expanded .faq-answer li {
+    margin-left: 2%;
+    text-indent: 1%;
+    list-style-type: disc;
+}
+  
+#faq .accordion-content {
+display: none;
+}
+
+#faq .accordion-content.active {
+display: block;
+}
+
+#faq .flex-column-half .faq-answer {
+    margin-top: 3%;
+}
+
+#faq .flex-column-full .faq-answer {
+    margin-top: 2%;
+}
+
+  #additional-resources {
+      display: none;
+  }
+
+  #faq.front-page-widget {
+    padding: 8rem 0;
+  }
+
+/*==================================================
+=                       CTA                        =
+==================================================*/
+
+.before-footer {
+    background-image: url(/wp-content/uploads/2020/07/cta-background.jpg)
+}
+
+.before-footer #custom_html-16 h5,
+.before-footer #custom_html-16 p,
+.before-footer #custom_html-16 a,
+.before-footer #custom_html-16 p + .custom-html-widget {
+    color: #fff;
+    text-align: center;
+}
+
+.before-footer #custom_html-16 .textwidget {
+    margin: 2.5%;
+}
+
+/*==================================================
+=                   FOOTER                         =
+==================================================*/
+
+#genesis-footer-widgets {
+    padding: 0;
+}
+
+#genesis-footer-widgets .flex-parent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#genesis-footer-widgets .flex-parent > * {
+    align-self: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 0;
+}
+#genesis-footer-widgets .flex-parent img {
+    max-width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+#genesis-footer-widgets .flex-parent .footer-contact {
+    flex-basis: 40%;
+    text-align: center;
+}
+
+#genesis-footer-widgets .flex-parent .menu-footer-container {
+    flex-basis: 5%;
+}
+
+.branded-0 #menu-footer {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.branded-0 #menu-footer a{
+    
+    display: block;
+    margin: 20% auto;
+
+}
+
+#menu-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#genesis-footer-widgets #menu-footer .menu-item {
+    width: 33%;
+    align-self: baseline;
+}
+
+#genesis-footer-widgets #menu-footer .menu-item a {
+    text-decoration: underline;
+}
+
+
+#genesis-footer-widgets + .footer-credits {
+    margin: 0 auto;
+    padding: 2% 0;
+    max-width: 75%;
+}
+
+#genesis-footer-widgets + .footer-credits .wrap {
+    max-width: 100%;
+    width: 100%;
+}
+
+#genesis-footer-widgets + .footer-credits section .widget-wrap {
+    font-size: .9em;
+    text-align: left;
+}
+
+#genesis-footer-widgets + .footer-credits h3 {
+    display: none;
+}
+
+
+/*==================================================
+=                MEDIA QUERIES                     =
+==================================================*/
+ 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1366px) {
+    #marquee section,
+    .page-template-primary-page .wrap {
+        width: 80vw;
+    }
+
+    .enrollment-cta .button {
+        width: 100%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1200px) {
+    #marquee section,
+    .page-template-primary-page .wrap {
+        width: 85vw;
+    }
+    
+    #menu-header-menu .sub-menu-toggle {
+
+        right: 0px;
+        top: 12px;
+    
+    }
+}
+ 
+/* Medium Tablets */
+@media only screen and (max-width : 992px) {
+    #marquee section{
+        flex-wrap: wrap-reverse;
+    }
+
+    #marquee.productV1,
+    #marquee.productV2 {
+        background-size: auto 100%;
+        background-position-x: center;
+        background-position-y: top;
+    }
+
+    #marquee.lifestyle .background{
+        background-image: linear-gradient(to right, rgb(255, 255, 255) 60%,rgba(255,255,255,0) 100%), url('/wp-content/uploads/2020/07/lifestyle-hero-full.jpg');
+        background-position-x: -8%;
+    }
+
+    #marquee.productV1 .marquee-item + .marquee-item img,
+    #marquee.productV2 .marquee-item + .marquee-item img {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+}
+
+/* Theme toggles nav menu */
+@media only screen and (max-width : 895px) {
+    #marquee{
+        margin-top: 60px;
+    }
+
+    #marquee.lifestyle .background {
+        background-image: linear-gradient(to right, rgb(255, 255, 255) 65%,rgba(255,255,255,0) 100%), url('/wp-content/uploads/2020/07/lifestyle-hero-full.jpg');
+        background-position-x: 0;
+    }
+
+    #marquee.productV1 .marquee-item + .marquee-item,
+    #marquee.productV2 .marquee-item + .marquee-item {
+        display: none;
+    }
+
+    #genesis-nav-primary.mobile-nav-primary .menu-item {
+        height: auto;
+    }
+    #genesis-nav-primary.mobile-nav-primary .sub-menu,
+    #genesis-nav-primary.mobile-nav-primary .sub-menu .menu-item {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }   
+    
+    #genesis-nav-primary.mobile-nav-primary .sub-menu-toggle {
+        display: none;
+    }
+    
+    #genesis-nav-primary.mobile-nav-primary .button{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 5% 0;
+    }
+
+    #marquee section,
+    #enrollment section,
+    #faq section,
+    #additional-resources section,
+    #cta section {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #marquee .flex-child,
+    .marquee-buttons .button,
+    #enrollment .flex-child, 
+    #faq .flex-column-half {
+        flex-basis: 100%;
+    }
+    
+    
+    /* #branded main {
+        background-position-y: -25%;
+    } */
+}
+ 
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+    #marquee.lifestyle .background {
+        background-image: linear-gradient(to right, rgb(255, 255, 255) 25%,rgba(255,255,255,.75) 100%), url('/wp-content/uploads/2020/07/lifestyle-hero-full.jpg');
+        background-position-x: 50%;
+    }
+
+    #marquee .marquee-logo {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: unset;
+    }
+    
+    #marquee h1 {
+        text-align: center;
+    }
+
+    #marquee p {
+        width: 75vw;
+        margin: 0 auto 5%;
+    }
+
+    .marquee-buttons,
+    #enrollment .flex-parent {
+        flex-wrap: wrap;
+    }
+
+    .marquee-buttons .button,
+    .marquee-buttons .button + .button {
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+    .marquee-buttons .button:not(.enrollment-button) {
+        min-width: 367.5px
+    }
+    .marquee-buttons .button:first-child {
+        margin-bottom: 5%;
+    }
+
+    .enrollment-cta {
+        padding: 0;
+        text-align: center;
+
+    }
+
+    div.enrollment-cards a.button {
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    .card-content, 
+    #menu-footer {
+        align-items: center;
+        text-align: center;
+    }
+
+    #enrollment .card-item:last-child .card-content {
+        max-width: unset;
+    }
+
+    #genesis-footer-widgets .flex-parent .footer-contact {
+        flex-basis: unset;
+    }
+
+    #genesis-footer-widgets .flex-parent .menu-footer-container {
+        flex-basis: 100%;
+    }
+}
+ 
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+    #marquee.lifestyle .background {
+        background-position-x: 65%;
+    }
+
+    #genesis-footer-widgets .flex-parent .footer-contact {
+        flex-basis: 60%;
+    }
+}
+
+/* Custom */ 
+@media only screen and (max-width : 414px) {
+    .marquee-buttons .button + .button {
+        font-size: 3.3vw;
+        min-height: 44px;
+    }
+
+    .enrollment-cta .button {
+        width: 75vw;
+    }
+}
+
+/* Custom */ 
+@media only screen and (max-width : 375px) {
+    #marquee {
+        margin-top: 15%;
+    }
+}
+ 
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .marquee-buttons .button + .button {
+        max-height: 44px;
+        min-height: 44px;
+        padding: 1.5%;
+    }
+}
