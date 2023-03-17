@@ -1,0 +1,153 @@
+import fetch from 'node-fetch'
+import { BodyData, BodyRaw } from '../../types/body-data'
+
+const URL = 'https://production.example.com/wp-json/wp/v2/pages?slug=homepage'
+
+function buttonLoop(items) {
+    let html = '';
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i].button
+        let target = '';
+        if (item.target.length > 0) {
+            target = item.target
+        } else {
+            target = '_self';
+        }
+        html += '<a class="button marquee_' + item.title + '" target="' + target + '" href="' + item.url + '">' + item.title + '</a> '
+    }
+    return html;
+}
+
+function cardLoop(items) {
+    let html = '';
+
+    for (let i = 0; i < items.card.length; i++) {
+        let item = items.card[i]
+        html += '<div class="card">'
+        html += '<img src="' + item.image.url + '">'
+        html += '<h4>' + item.card_title + '</h4>'
+        html += '<hr>'
+        html += '<p>' + item.card_text + '</h4>'
+        html += '</div>'
+    }
+
+    return html;
+}
+
+function getStartedLoop(items, bullet) {
+    let html = '<ul>';
+
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i]
+        html += '<li>'
+        html += '<div class="grid">'
+        html += `<img src="${bullet}"></img>`
+        html += '<h4>' + item.title + '</h4>'
+        html += '</div>'
+        html += item.text
+        html += '</li>'
+    }
+
+    html += '</ul>'
+
+    return html;
+}
+
+function ornamentLoop(items) {
+    let html = '';
+
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i]
+        html += '<div class="ornament"><img src="' + item.image.url + '"></div>'
+    }
+
+    return html;
+}
+
+// const rawPageFromWordpress = {
+//     components: [
+//         {
+//             type: 'Marquee',
+//             title: 'Some title here',
+//             buttons: [{
+//                 type: 'MarqueButton',
+//                 text: 'Cancel'
+//             }, {
+//                 type: 'MarqueButton',
+//                 text: 'Continue'
+//             }]
+//         },
+//         {
+
+//         }
+//     ]
+// }
+
+// const ACF = {
+//     title: {
+//         text: 'Something'
+//     },
+//     card: {
+//         title: 'Card Title'
+//     }
+// }
+
+// const ACF = [
+//     {
+//         type: 'Title',
+//         data: {
+//             text: 'Something'
+//         }
+//     },
+//     {
+//         type: 'Card',
+//         data: {
+//             text: 'Something'
+//         }
+//     }
+// ]
+
+// // body
+// components.map(c => {
+//     if (component.type === 'Marquee') {
+//         <Marquee {...component} />
+//     } else if (component.type === '')
+// })
+
+
+export default async (req, res ) => {
+    const response = await fetch(`${URL}`)
+    const json = await response.json() as BodyRaw[]
+    //console.log(json)
+    if (!json.length) {
+        res.status(500).send("Internal Server Error")
+        return
+    }
+
+    const data = json[0].acf
+
+    const components = data.something
+
+    const marquee = data.marquee
+    const marqueeButtons = buttonLoop(data.marquee.marquee_buttons)
+    const brand_statement = data.brand_statement[0]
+    const card_background = data.card_section.background.url
+    const card_ornaments = ornamentLoop(data.card_section.ornaments)
+    const card_title = data.card_section.title
+    const cards = cardLoop(data.card_section)
+    const get_started = data.get_started
+    const get_started_list = getStartedLoop(data.get_started.list, data.get_started.list_bullet.url);
+
+
+    res.status(200).json({
+        marquee,
+        marqueeButtons,
+        brand_statement,
+        card_background,
+        card_ornaments,
+        card_title,
+        cards,
+        get_started,
+        get_started_list
+    })
+}

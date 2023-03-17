@@ -1,0 +1,39 @@
+version: "3.8"
+
+services: 
+    web:
+        image: orva:latest
+        build: .
+        environment:
+            - VIRTUAL_HOST=foo.example.com
+            - VIRTUAL_PORT=80
+            - LETSENCRYPT_HOST=foo.example.com
+            - LETSENCRYPT_EMAIL=email@example.com
+    
+    proxy:
+        image: nginxproxy/nginx-proxy
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - certs:/etc/nginx/certs
+            - vhost:/etc/nginx/vhost.d
+            - html:/usr/share/nginx/html
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+
+    letsencrypt:
+        image: nginxproxy/acme-companion
+        volumes:
+            - acme:/etc/acme.sh
+            - certs:/etc/nginx/certs
+            - vhost:/etc/nginx/vhost.d
+            - html:/usr/share/nginx/html
+
+volumes:
+    acme:
+    certs:
+        external: true
+    vhost:
+        external: true
+    html:
+        external: true
