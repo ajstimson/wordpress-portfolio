@@ -12,11 +12,11 @@ In 2021, I built a front-end application using React, Next.js, and TypeScript to
 In 2019, I built a product configuration web application using the WordPress
 You can visit the site at [Woodfold Elevator Gate Order Form](https://woodfold.com/elevator/order-form/?user=guest).
 
-## WordPress Template Demo
+## WordPress Template Demos
 
 This folder contains two projects.
 
-1. A WooCommerce theme I customized in 2018 for ExpressPCB, which showcases file parsing and PHP session management. You can visit the site at [ExpressPCB](https://expresspcb.com/).
+1. A WooCommerce theme I customized in 2018 for ExpressPCB, which showcases file parsing, PHP session management, WooCommerce template customization and other features. You can visit the site at [ExpressPCB](https://expresspcb.com/).
 2. A responsive WordPress theme I customized in 2019 for IDExperts using the Genesis Framework. You can visit the site at [IDExperts MicroSite](https://idemicrosite.wpengine.com/case-1-enrollment/).
 
 ## Plugin Demo
