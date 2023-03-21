@@ -20,7 +20,5 @@ IDExperts required a WordPress theme that could be quickly launched in the event
 ## How I Would Improve This Application
 
 -   I would use a CSS preprocessor like SASS to make the CSS more maintainable.
--   I would improve the use of CSS flexbox and grid to make reduce the amount of media queries needed to make the site responsive.
 -   I would use the WordPress block editor to create reusable blocks rather than using Advanced Custom Fields.
--   I would recommend exporting the WordPress generated site into a static site generator like Jekyll specifically using the [WP->Jekyll exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter) or [Simply Static](https://wordpress.org/plugins/simply-static/) to make the site more secure.
--   A Docker container could include instructions to automatically export the site to a static site generator and deploy the site to a static site host like Netlify.
+-   I would recommend exporting the WordPress generated site into a static site generator like Jekyll specifically using the [WP->Jekyll exporter](https://github.com/benbalter/wordpress-to-jekyll-exporter) or [Simply Static](https://wordpress.org/plugins/simply-static/) to make the site more secure (something very important to the client given their industry).
